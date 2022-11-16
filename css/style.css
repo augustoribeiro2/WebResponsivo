@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #ccc;
+    background: linear-gradient(to right, green, yellow);
 }
 .informacoes{
     text-align: center;
@@ -28,9 +28,27 @@ body{
     text-align: left;
 }
 
-img{
+.img2{
     max-width: 100%;
     border: 1px solid black;
+}
+
+.div-footer {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-footer-img {
+    max-width: 100%;
+    height: 20px;
+    margin: 10px;
+}
+
+.div-footer-img:hover{
+    border: 2px solid black;
+    height: 24px;
 }
 
 @media screen and (max-width: 1024px) {
