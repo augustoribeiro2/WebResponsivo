@@ -5,37 +5,52 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <style>
+            .wrapper .img h2 span{
+                font-size: 12px;
+                cursor: pointer;
+            }
+            .wrapper .img p{
+                overflow: hidden;
+                height: 15px;
+                transition: 1s;
+            }
+
+            .mostrar {
+                height: 250px !important;
+            }
+        </style>
         <div class="informacoes">
             <h1>Informações sobre os Pássaros</h1>
         </div>
         <div class="wrapper">
             <div class="img">
-                <h2>Pássaro X</h2>
+                <h2>Pássaro X <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
             <div class="img">
-                <h2>Pássaro Y</h2>
+                <h2>Pássaro Y <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens-2.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
             <div class="img">
-                <h2>Pássaro Z</h2>
+                <h2>Pássaro Z <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens-3.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
             <div class="img">
-                <h2>Pássaro A</h2>
+                <h2>Pássaro A <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
             <div class="img">
-                <h2>Pássaro B</h2>
+                <h2>Pássaro B <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens-2.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
             <div class="img">
-                <h2>Pássaro C</h2>
+                <h2>Pássaro C <span>Ver mais!</span></h2>
                 <img class="img2" src="https://www.petz.com.br/blog/wp-content/uploads/2022/06/animais-selvagens-3.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus mi, consectetur sit amet dui eget, ullamcorper eleifend neque. Nulla quis mi varius, consequat nisi interdum, fringilla ligula. Phasellus sed mi et erat lobortis dictum id vel sem. Integer ultrices, felis vel faucibus dapibus, est dolor commodo ligula, vel placerat nunc ligula sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur pretium facilisis ante, eu lacinia elit aliquet posuere. Etiam sit amet euismod mauris.</p>
             </div>
@@ -46,5 +61,23 @@
                 <img class="div-footer-img" src="GitHub_Logo.png" alt="LogoGit">
             </a>
         </div>
+
+        <script>
+            var span = document.querySelectorAll('.wrapper .img h2 span');
+
+            span.forEach((item, index) => {
+                span[index].addEventListener('click', function(){
+                    let conteudo = document.querySelectorAll('.wrapper .img p');
+
+                    if (conteudo[index].classList.contains('mostrar')){
+                        span[index].innerHTML = 'Ver mais!';
+                        conteudo[index].classList.remove('mostrar');
+                    }else{
+                        span[index].innerHTML = 'Ocultar';
+                        conteudo[index].classList.add('mostrar');
+                    }
+                })
+            });
+        </script>
     </body>
 </html>
